@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de inscripción</title>
+</head>
+<body>
+
+    <h1>Inscripción al Taller </h1>
+    <p>Complete el formulario para registrar su interés en participar en el taller.</p>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <label for="nombre">Nombres y apellidos:</label><br>
+            <input type="text" id="nombre" name="nombre"
+                   required minlength="3" maxlength="80"
+                   placeholder="Ej. Juan Carlos Pérez López"><br><br>
+
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo"
+                   required placeholder="ejemplo@correo.com"><br><br>
+
+            <label for="telefono">Número de teléfono:</label><br>
+            <input type="tel" id="telefono" name="telefono"
+                   placeholder="0999999999" pattern="[0-9]{10}"
+                   minlength="10" maxlength="10"
+                   title="Ingrese un número de 10 dígitos"><br><br>
+
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad"
+                   min="15" max="80" required
+                   placeholder="Ej. 20"><br><br>
+
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"
+                   required min="1944-01-01" max="2010-12-31"><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Datos Académicos</legend>
+
+            <label for="carrera">Carrera o curso:</label><br>
+            <input type="text" id="carrera" name="carrera"
+                   required minlength="3" maxlength="100"
+                   placeholder="Ej. Ingeniería en Sistemas"><br><br>
+
+            <label for="nivel">Nivel académico:</label><br>
+            <select id="nivel" name="nivel" required>
+                <option value="">-- Seleccione una opción --</option>
+                <option value="bachillerato">Bachillerato</option>
+                <option value="tecnologico">Tecnológico</option>
+                <option value="universitario">Universitario</option>
+                <option value="posgrado">Posgrado</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+
+            <label for="institucion">Institución educativa:</label><br>
+            <input type="text" id="institucion" name="institucion"
+                   minlength="3" maxlength="120"
+                   placeholder="Ej. Universidad de Guayaquil"><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Preferencias del Taller</legend>
+
+            <p><strong>Modalidad del taller:</strong></p>
+            <input type="radio" id="presencial" name="modalidad" value="presencial" required>
+            <label for="presencial">Presencial</label>&nbsp;&nbsp;
+            <input type="radio" id="virtual" name="modalidad" value="virtual">
+            <label for="virtual">Virtual</label>&nbsp;&nbsp;
+            <input type="radio" id="hibrida" name="modalidad" value="hibrida">
+            <label for="hibrida">Híbrida</label><br><br>
+
+            <p><strong>Temas de interés:</strong></p>
+            <input type="checkbox" id="html" name="temas" value="html">
+            <label for="html">HTML</label>&nbsp;&nbsp;
+            <input type="checkbox" id="css" name="temas" value="css">
+            <label for="css">CSS</label>&nbsp;&nbsp;
+            <input type="checkbox" id="js" name="temas" value="javascript">
+            <label for="js">JavaScript</label>&nbsp;&nbsp;
+            <input type="checkbox" id="git" name="temas" value="git">
+            <label for="git">Git &amp; GitHub</label>&nbsp;&nbsp;
+            <input type="checkbox" id="responsive" name="temas" value="responsive">
+            <label for="responsive">Diseño Responsivo</label><br><br>
+
+            <p><strong>Nivel de conocimiento previo:</strong></p>
+            <input type="radio" id="basico" name="conocimiento" value="basico" required>
+            <label for="basico">Básico</label>&nbsp;&nbsp;
+            <input type="radio" id="intermedio" name="conocimiento" value="intermedio">
+            <label for="intermedio">Intermedio</label>&nbsp;&nbsp;
+            <input type="radio" id="avanzado" name="conocimiento" value="avanzado">
+            <label for="avanzado">Avanzado</label><br><br>
+
+            <label for="color">Color favorito para personalizar el ambiente del taller:</label><br>
+            <input type="color" id="color" name="color" value="#0057b8"><br><br>
+
+            <label for="motivacion">Nivel de motivación (1 = bajo, 10 = muy alto):</label><br>
+            <input type="range" id="motivacion" name="motivacion"
+                   min="1" max="10" step="1" value="5">
+            <span>1 — 10</span><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Disponibilidad</legend>
+
+            <label for="fecha_inicio">Fecha preferida para iniciar:</label><br>
+            <input type="date" id="fecha_inicio" name="fecha_inicio"
+                   required min="2025-01-01"><br><br>
+
+            <label for="hora">Hora disponible:</label><br>
+            <input type="time" id="hora" name="hora"
+                   required min="06:00" max="22:00"><br><br>
+
+            <label for="jornada">Jornada preferida:</label><br>
+            <select id="jornada" name="jornada" required>
+                <option value="">-- Seleccione una jornada --</option>
+                <option value="manana">Mañana (06:00 – 12:00)</option>
+                <option value="tarde">Tarde (12:00 – 18:00)</option>
+                <option value="noche">Noche (18:00 – 22:00)</option>
+            </select><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Información Adicional</legend>
+
+            <label for="archivo">Subir archivo de ejemplo (captura o documento):</label><br>
+            <input type="file" id="archivo" name="archivo"
+                   accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"><br><br>
+
+            <label for="portafolio">Enlace a portafolio o perfil académico:</label><br>
+            <input type="url" id="portafolio" name="portafolio"
+                   placeholder="https://miportafolio.com"
+                   pattern="https?://.+"
+                   title="Debe comenzar con http:// o https://"><br><br>
+
+            <label for="comentarios">Comentarios adicionales:</label><br>
+            <textarea id="comentarios" name="comentarios"
+                      rows="6" cols="50"
+                      placeholder="Escriba aquí cualquier información adicional..."
+                      maxlength="500"></textarea><br><br>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Enviar inscripción</button>
+        &nbsp;
+        <button type="reset">Limpiar formulario</button>
+
+    </form>
+
+</body>
+</html>
